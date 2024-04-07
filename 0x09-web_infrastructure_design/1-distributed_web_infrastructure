@@ -1,0 +1,18 @@
+1. additional element (load blancer) : distributing incoming network traffic acroos a group of backend servers, thats help to handel many request in the same time 
+2. blancer algorithm (Round Robin) : is the simplest, requests are distributed across the group of servers sequentially
+3. the load balancer enabling an active-active 
+				Active-Active : whene the two servers are working together to handel request
+				Active-Passive : when one server is working until crash and stop, the second server will start handeling request
+4. Database primary-replica:
+			- Primary(Master) this is the main server responsible for handling all operation (update, insert, deletes) on the database
+			- Replicas(slaves) this are sercondry server that keep a copy of a database, this is only for read, 
+			you could have multiple replicas for redundancy 
+5. the main defrence between Primary node and Replac node is that primary is for write and has limitation in read and the Replica node is for read only
+
+
+issues are with this infrastructure:
+1. SPOF: missing a seconry pwoer supply
+2. Security issues 
+		-no firewall : without firewall servers are exposed to varios security threats
+		-no HTTPS : HTTPS is crucail to encrypting the comminication between the user prowser and the server 
+3. with no montoring you will have a lot of issues and lack of preformance during the time, and mybe cause instable or crashed servers

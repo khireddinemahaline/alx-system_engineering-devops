@@ -1,0 +1,17 @@
+1. server : is a computer or a device that provides a service to another computer program and its user host website(IP:8.8.8.8)
+2. domain name : is a simple domain that easy to remember like "ww.foobar.com"  made over the worl wide world
+3. DNS : is the phonebook of the internet >> and its to easy find the IP accosited with the domaine name and the sub-domain www
+4. web server(Nginx) :  is a computer devise (software and hardware) that use HTTP and other protocole to responde to a client request
+5. application server : acting as a host or container for the user busness logic and excute the website's dynamic code
+6. database(MYSQL) : is to store information in an orginazed way
+
+server using protocole and languge to communicate with the computer this Protocols like HTTP define how data is formatted and transmitted, 
+while languages like HTML, CSS, and JavaScript build the content and functionality of web pages.
+
+ issues are with this infrastructure like : 
+ SPOF : refer to fault or malfunction that cause the whole system to stop operating or being unstable in our case one server could cause SPOF if a problem happend to theat server
+ Downtime : is neccesry when maintainig and the best solution is to choose a provider with less Downtime
+ website scaling : that mean your website could accpte and handle many users with high preformance and there are 3 main solution 
+ - vertical scaling : adding hardware components
+ - horizantal scaling : adding additional servers
+ - auto scaling : cloud dedicated servers

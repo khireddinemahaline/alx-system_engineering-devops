@@ -1,0 +1,10 @@
+HAproxy Cluster:
+
+Redundancy: By configuring the two HAproxy instances as a cluster, you gain redundancy in the load balancing layer. If one HAproxy instance fails, the other can take over, minimizing downtime.
+Scalability: You can easily add more HAproxy instances to the cluster to handle increased traffic and improve overall load distribution.
+
+Split Components: by spliting componentes we will gain: 
+						multiple recource of hardware
+						better managment
+						more secure
+						
