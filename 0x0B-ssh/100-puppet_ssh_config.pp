@@ -1,4 +1,5 @@
 include stdlib
+# change some configration file arg
 
 file_line {'Turn off passwd auth':
     ensure  => present,
