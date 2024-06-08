@@ -10,6 +10,17 @@ Variables are case sensitive and capitalized by default. Giving local variables 
 ## 2.2 Export variable
 A variable created like the ones in the example above is only available to the current shell. It is a local variable: child processes of the current shell will not be aware of this variable. In order to pass variables to a subshell, we need to export them using the export built-in command. Variables that are exported are referred to as environment variables.
 `export DOM="my text"`
+## 3.1 FILE
+#### /etc/profile
+System wide profile file. All the variables created in this file are accessible by every user on the system, but only if that user’s session is invoked remotely, i.e. via remote login
+#### .bashrc
+This file is user specific file that gets loaded each time user creates a new local session i.e. in simple words, opens a new terminal. All environment variables created in this file would take effect every time a new local session is started.
+#### /etc/bash.bashrc
+System wide bashrc file. This file is loaded once for every user, each time that user opens a local terminal session. Environment variables created in this file are accessible for all users but only through local terminal session
+#### ~/.bash_profile
+This is the preferred configuration file for configuring user environments individually. In this file, users can add extra configuration options or change default settings:
+#### ~/.bash_login
+This file contains specific settings that are normally only executed when you log in to the system. I
 ### 2. set
 ### 3. unset
 ### 4. export
