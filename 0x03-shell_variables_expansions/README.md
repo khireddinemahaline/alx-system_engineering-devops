@@ -21,7 +21,7 @@ System wide bashrc file. This file is loaded once for every user, each time that
 This is the preferred configuration file for configuring user environments individually. In this file, users can add extra configuration options or change default settings:
 #### ~/.bash_login
 This file contains specific settings that are normally only executed when you log in to the system. I
-### 2. set
+### 2. set : 
 ### 3. unset
 ### 4. export
 ### 5. alias
