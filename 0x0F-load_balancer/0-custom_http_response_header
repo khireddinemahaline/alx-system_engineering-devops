@@ -35,4 +35,8 @@ printf %s "server {
     }
 }" > /etc/nginx/sites-available/default
 
+<<<<<<< HEAD
 service nginx restart
+=======
+service nginx restart
+>>>>>>> origin/main
