@@ -28,4 +28,4 @@ printf %s "server {
     }
 }" > /etc/nginx/sites-available/default
 
-/etc/init.d/nginx restart
+sudo /etc/init.d/nginx restart
