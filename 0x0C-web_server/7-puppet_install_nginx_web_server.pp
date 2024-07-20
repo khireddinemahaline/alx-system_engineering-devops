@@ -1,6 +1,6 @@
 #install ngnix using puppt
 
-exec {'install':
-provider => shell,
-command  => 'sudo apt-get -y update ; sudo apt-get -y install nginx ; echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html ; sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/Tolulope05 permanent;/" /etc/nginx/sites-available/default ; sudo service nginx start',
+excu {'ngnix'
+provider  => 'shell',
+command   => 'apt-get -y update; apt-get -y install nginx; echo "Hello World" | sudo tee /var/www/html/index.nginx-debian.html; sudo sed -i "/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/ permanent;\" /etc/nginx/sites-available/default sudo service nginx restart',
 }
