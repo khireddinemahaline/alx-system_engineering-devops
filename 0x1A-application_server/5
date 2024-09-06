@@ -1,0 +1,31 @@
+server {
+        add_header X-Served-By $HOSTNAME;
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        server_name 100.26.178.132;
+
+        location = /airbnb-onepage/ {
+                proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+        }
+
+        location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+                proxy_pass http://127.0.0.1:5001/airbnb-dynamic/number_odd_or_even/$1;
+        }
+
+        location /api {
+                proxy_pass http://127.0.0.1:5001/api;
+        }
+
+        # the route of the application
+        location / {
+                proxy_pass http://127.0.0.1:5003/2-hbnb;
+        }
+
+        # server static content
+        location /static/ {
+        alias /home/ubuntu/AirBnB_clone_v4/web_dynamic/static/;
+        }
+
+        error_page 404 /error.html;
+}
